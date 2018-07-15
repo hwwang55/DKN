@@ -1,6 +1,6 @@
-## DKN
+# DKN
 
-- This repository is the implementation of [DKN](https://dl.acm.org/citation.cfm?id=3186175) ([arXiv](https://arxiv.org/abs/1801.08284)):
+This repository is the implementation of [DKN](https://dl.acm.org/citation.cfm?id=3186175) ([arXiv](https://arxiv.org/abs/1801.08284)):
 > DKN: Deep Knowledge-Aware Network for News Recommendation  
 Hongwei Wang, Fuzheng Zhang, Xing Xie, Minyi Guo  
 The Web Conference 2018 (WWW 2018)
@@ -24,10 +24,10 @@ The Web Conference 2018 (WWW 2018)
 
 
 ### Format of input files
-- raw_train.txt and raw_test.txt:  
+- **raw_train.txt** and **raw_test.txt**:  
   `user_id[TAB]news_title[TAB]label[TAB]entity_info`  
   for each line, where `news_title` is a list of words `w1 w2 ... wn`, and `entity_info` is a list of pairs of entity id and entity name: `entity_id_1:entity_name;entity_id_2:entity_name...`
-- kg.txt:  
+- **kg.txt**:  
   `head[TAB]relation[TAB]tail`  
   for each line, where `head` and `tail` are entity ids and `relation` is the relation id.
 
