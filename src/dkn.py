@@ -138,7 +138,7 @@ class DKN(object):
         with tf.name_scope('train'):
             self.base_loss = tf.reduce_mean(
                 tf.nn.sigmoid_cross_entropy_with_logits(labels=self.labels, logits=self.scores_unnormalized))
-            self.l2_loss = tf.Variable(tf.constant(0., dtype=tf.float32))
+            self.l2_loss = tf.Variable(tf.constant(0., dtype=tf.float32), trainable=False)
             for param in self.params:
                 self.l2_loss = tf.add(self.l2_loss, args.l2_weight * tf.nn.l2_loss(param))
             if args.transform:
