@@ -312,7 +312,7 @@ void* transetrainMode(void *con) {
 	pthread_exit(NULL);
 }
 
-void* train_transe(void *con) {
+void train_transe() {
 	transeLen = tripleTotal;
 	transeBatch = transeLen / nbatches;
 	next_random = (unsigned long long *)calloc(transeThreads, sizeof(unsigned long long));
@@ -364,7 +364,7 @@ void out_transe() {
 int main() {
 	time_t start = time(NULL);
 	init();
-	train_transe(NULL);
+	train_transe();
 	out_transe();
 	cout << time(NULL) - start << " s" << endl;
 	return 0;
