@@ -51,7 +51,7 @@ struct cmp_tail {
 unsigned long long *next_random;
 
 unsigned long long randd(int id) {
-	next_random[id] = next_random[id] * (unsigned long long)25214903917 + 11;
+	next_random[id] = (1664525 * next_random[id] + 1013904223) % 4294967296;
 	return next_random[id];
 }
 
